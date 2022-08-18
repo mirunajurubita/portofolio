@@ -1,0 +1,84 @@
+.header{
+    padding:8rem 15rem 10rem 6rem;
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:10rem; 
+}
+.header__right{
+    grid-template-columns: 1fr 1fr;
+}
+.header__right h1{
+    padding-bottom:2rem;
+}
+.header__right p{
+    padding-bottom:2rem;
+}
+.achievements{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5rem;
+}
+.achievements__cards {
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+    border-radius:1rem;
+    text-align:center;
+    padding-top:1.2rem;
+    padding-bottom:1.2rem;
+    transition: var(--transition);
+}
+.achievements__cards:hover{
+    background: var(--color-bg2);
+    cursor: pointer;
+}
+.icon{
+    background: var(--color-success);
+    padding:1rem;
+    border-radius:1rem;
+    display:inline-block;
+    margin-bottom:2rem;
+    font-size:2rem;
+}
+
+/*========SECTION TABLET========*/
+@media screen and (max-width:1024px){
+    .header{
+        display:grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .header__left{
+        width:80%;
+        margin:0 auto;    
+        }
+    .header__right{
+        margin:0 auto;    
+        text-align:center;
+    }
+}
+
+/*========SECTION PHONE========*/
+@media screen and (max-width:650px){
+    .header__left{
+        width:80%;
+        margin:0 auto;    
+        }
+    .header__right{
+        width:80%;
+        margin:0 auto;    
+    }
+
+    .description p{
+        text-align:center;
+    }
+    .header__right h1{
+        margin-left: -1rem;
+    }
+    .achievements {
+        grid-template-columns: 1fr;
+    }
+}
+
+
